@@ -1,0 +1,32 @@
+# Manipulando chaves e valores em dicionários
+pessoa = {}
+
+##
+##
+
+chave = 'nome'
+
+pessoa[chave] = 'Luiz Otávio'
+pessoa['sobrenome'] = 'Miranda'
+
+
+print(pessoa[chave])
+
+pessoa[chave] = 'Maria'
+
+del pessoa['sobrenome']
+print(pessoa)
+print(pessoa['nome'])
+
+print(pessoa.get('sobrenome'))
+if pessoa.get('sobrenome') is None:
+    print('NÃO EXISTE')
+else:
+    print(pessoa['sobrenome'])
+
+# print('ISSO Não vai')
+
+'''Aproximadamente 256.000 resultados (0,42 segundos) 
+O get() é um método usado para pegar o valor de uma dada chave em um dicionário
+se a chave estiver no dicionário, caso ela não exista, o método retorna None ou o
+valor padrão passado por parâmetro.'''
